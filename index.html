@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluent Rock Paper Scissors</title>
+
+  <!-- CSS Reference -->
+  <link rel="stylesheet" href="styles2.css" />
+
+  <!-- JS Reference -->
+  <script defer src="./rockPaperScissors.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Bundle JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <header class="fluent-header">
+    <div class="container">
+      <h1>Fluent Rock Paper Scissors</h1>
+    </div>
+  </header>
+
+  <main class="flex-grow-1">
+    <!-- Your game layout remains unchanged -->
+    <div class="row" id="game">
+      <div class="col" id="game">
+        <div class="container" id="user">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-primary" id="Rock">
+                <img src="./images/fist.png" alt="Rock" />
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-primary" id="Paper">
+                <img src="./images/hand-palm.png" alt="Paper" />
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-primary" id="Scissors">
+                <img src="./images/scissor.png" alt="Scissors" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="computer">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-danger disabled" id="Rock">
+                <img src="./images/fist.png" alt="Rock" />
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger disabled" id="Paper">
+                <img src="./images/hand-palm.png" alt="Paper" />
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger disabled" id="Scissors">
+                <img src="./images/scissor.png" alt="Scissors" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" id="scoreAndDetail">
+        <div class="card">
+          <div class="scoreBoard">
+            <div class="container">
+              <div class="row text-center">
+                <div class="col-2">
+                  <strong>P1</strong>
+                </div>
+                <div class="col-2">
+                  <strong>0</strong>
+                </div>
+                <div class="col-2">
+                  <strong>:</strong>
+                </div>
+                <div class="col-2">
+                  <strong>0</strong>
+                </div>
+                <div class="col-2">
+                  <strong>PC</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Round</th>
+                <th scope="col">P1</th>
+                <th scope="col">PC</th>
+                <th scope="col">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="fluent-footer">
+    <div class="container">
+      <p>© Created by Simen Dale</p>
+    </div>
+  </footer>
+</body>
+</html>
