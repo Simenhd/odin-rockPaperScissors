@@ -23,13 +23,39 @@
 
     <!-- Game -->
     <main>
-      <div class="game-container">
-        <div class="game-grid">
-          <button>Rock</button>
-          <button>Paper</button>
-          <button>Scissors</button>
+      <div class="scoreboard-container">
+          <div class="scoreboard">
+            <h2>Player</h2>
+            <div class="scorecard" id="Player">0</div>
+          </div>
+          <div class="roundcounter"> 
+            <div id="rounddisplay">
+              <p>Round</p>
+              <p id="roundnum">0<p>
+            </div>
+          </div>
+          <div class="scoreboard">
+            <h2>Computer</h2>
+            <div class="scorecard" id="Computer">0</div>
         </div>
       </div>
+      <div class="container">
+        <div class="game-container" id="player">
+          <div class="game-grid">
+            <button>Rock</button>
+            <button>Paper</button>
+            <button>Scissors</button>
+          </div>
+        </div>
+
+        <div class="game-container" id="pc">
+          <div class="game-grid">
+            <button>Rock</button>
+            <button>Paper</button>
+            <button>Scissors</button>
+          </div>
+        </div>
+    </div>
     </main>
 
 
