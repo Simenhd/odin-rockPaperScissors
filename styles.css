@@ -1,116 +1,136 @@
+/* Reset styles */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+/* General styles */
+
+html,
+body {
+    height: 100%;
+    background-color: #8ecae6;
+
+  /* Font */
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    margin: 0px;
-}
-
-
-/* Base button styling */
-    button {
-        background-color: #3498db; /* Initial background color */
-        color: #fff;               /* Text color */
-        border: none;              /* No border */
-        padding: 10px 20px;        /* Padding for a nice clickable area */
-        font-size: 16px;
-        border-radius: 4px;        /* Slightly rounded corners */
-        cursor: pointer;           /* Cursor becomes pointer on hover */
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    }
-    
-    /* Hover effect */
-    button:hover {
-        background-color: #2980b9; /* Darker background on hover */
-        transform: scale(1.05);    /* Slightly increases button size */
-    }
-  
-
-header {
-    height: 72px;
-}
-
-.main_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center ;
-    flex: 1;
-    padding: 15% 15%;
-}
-
-.score_bar {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 140px;
-    height: 30px;
-    border: 1px solid #000;
-    box-sizing: border-box;
-  }
-  
-  .score {
-    display: flex;
-    align-items: center;     
-    justify-content:space-between; 
-    width: 70px;             
-    height: 100%;            
-    box-sizing: border-box;
-    color: white;
-    padding: 0px 5px;
-  }
-  
-
-  /* Example: highlight the player's score in green */
-  .score#player {
-    background-color: green;
-    flex-direction: row-reverse;
-  }
-
-  .score#computer {
-    background-color: red;
-    flex-direction: row;
-  }
-  
-  .seperator {
-    align-self: stretch;
-    width: 1px;
-    background-color: #000;
-  }
-  
-  
-
-.board {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex: 1;
-    gap: 15px;
-    flex-wrap: wrap;
 }
 
-.row {
-    display: flex;
-    justify-content: space-evenly;
-    height: 50%;
-    gap: 30px;
-}
+/* Header */ 
+    header {
+        overflow: hidden;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        background-color: #219ebc;
+        min-height: 90px;
+        position: sticky;
+        top: 0;
 
-.tile {
-    display: flex;
-    align-items: center;
-    justify-content: center;;
-    border:  1px solid gainsboro;
-    width: 150px;
-    height: 100px;
-}
+    }
 
-.tile img {
-    max-width: 100%;
-    max-height: 100%;
-    width: 200px;
-    height: auto;
-    object-fit: contain;
-}
+    header button, header a, .feedback-box button {
+        color: white;
+        font-weight: 700;
+        float: left;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+        border: 0px;
+        background-color: transparent;
 
-footer {
-    height: 72px;
-}
+        cursor: pointer;
+        transition: all 250ms;
+    }
+
+    header button:hover, header a:hover, .feedback-box button:hover  {
+        background-color: #FB8500;
+        transform: translateY(-3px);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    }
+
+    /* Move nav links to the right */
+    .header-right {
+        float: right;
+    }
+
+
+    /* Game */
+
+
+    main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+    .game-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin: auto;
+      }
+      
+
+    .game-grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: 120px;
+        grid-gap: 5px;
+        padding: 15px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        background-color: #219ebc;
+      }
+
+      .game-grid > button {
+        background-color: #ffb703;
+        border: 1px solid black;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 250ms;
+      }
+      
+      .game-grid > button:hover {
+        transform: translateY(2px);
+        background-color: #e6a503;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+
+      footer {
+        min-height: 50px;
+        background-color: #219ebc;
+        margin-top: auto;
+        align-content: center;
+        text-align: center;
+        color: white;
+    }
